@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Run Bun Bun Run</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Main Menu -->
+        <div id="main-menu" class="screen">
+            <h1 class="game-title">Run Bun Bun Run</h1>
+            <div class="menu-buttons">
+                <button class="btn btn--primary btn--lg" id="start-btn">Start Game</button>
+                <button class="btn btn--secondary btn--lg" id="settings-btn">Settings</button>
+                <div class="highscore-display">
+                    <span class="highscore-label">Highscore:</span>
+                    <span id="menu-highscore">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Menu -->
+        <div id="settings-menu" class="screen" style="display: none;">
+            <h2>Settings</h2>
+            <div class="settings-content">
+                <div class="setting-item">
+                    <label class="form-label">Difficulty:</label>
+                    <select id="difficulty-select" class="form-control">
+                        <option value="easy">Easy</option>
+                        <option value="normal" selected>Normal</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label class="form-label">Sound Volume:</label>
+                    <input type="range" id="volume-slider" class="form-control" min="0" max="100" value="70">
+                    <span id="volume-value">70%</span>
+                </div>
+                <div class="setting-item">
+                    <label class="form-label">
+                        <input type="checkbox" id="music-toggle" checked>
+                        Background Music
+                    </label>
+                </div>
+            </div>
+            <button class="btn btn--primary" id="back-to-menu-btn">Back to Menu</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="screen" style="display: none;">
+            <h2>Game Over!</h2>
+            <div class="game-over-content">
+                <div class="score-display">
+                    <div class="score-item">
+                        <span class="score-label">Score:</span>
+                        <span id="final-score" class="score-value">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">Highscore:</span>
+                        <span id="final-highscore" class="score-value">0</span>
+                    </div>
+                    <div id="new-record" class="new-record" style="display: none;">NEW RECORD!</div>
+                </div>
+                <div class="game-over-buttons">
+                    <button class="btn btn--primary btn--lg" id="restart-btn">Restart</button>
+                    <button class="btn btn--secondary" id="menu-btn">Main Menu</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- HUD -->
+        <div id="hud" style="display: none;">
+            <div class="hud-top">
+                <div class="hud-item">
+                    <span class="hud-label">Score:</span>
+                    <span id="score-display">0</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">Height:</span>
+                    <span id="height-display">0</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">Best:</span>
+                    <span id="best-display">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Controls -->
+        <div id="mobile-controls" style="display: none;">
+            <button class="mobile-btn" id="left-btn">◀</button>
+            <button class="mobile-btn" id="right-btn">▶</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
