@@ -58,3 +58,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👤 Author
 
 Developed by **[Krishna Patil](https://github.com/kriss2012)**.
+
+---
+
+## Author
+
+Developed and maintained by **[Krishna Patil](https://github.com/kriss2012)**.
